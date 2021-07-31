@@ -1,14 +1,31 @@
 .our-team {
-    background: #F5F4FA;
-    padding-top: 94px;
-    padding-bottom: 94px;
+        background: #F5F4FA;
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+.rep-team {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 33px;
+    /* identical to box height */
+
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: #212121;
+    margin: 0;
+    margin-bottom: 30px;
 }
 
 .our-team-list {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
     padding: 0;
-   
+
     & h3 {
         margin: 0;
         padding: 0;
@@ -38,27 +55,22 @@
 }
 
 .our-team-list-item-description {
-    padding-top: 30px;
-    padding-bottom: 30px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-right: 24px;
 }
 
-
-
 .our-team-list-item {
-    width: 270px;
-    
     background-color: var(--background-color);
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
                 0px 1px 1px rgba(0, 0, 0, 0.14), 
                 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
+    
     &:not(:last-child) {
-        margin-right: 30px;
+        margin-bottom: 30px;
     }
-
 }
 
 .soc-list {
@@ -91,7 +103,6 @@
     fill: #AFB1B8;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
-    &:hover,
     &:focus {
     background-color: var(--accent-color);
     fill: var(--background-color);
@@ -101,4 +112,41 @@
 
 .soc-link-icon {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 768px) {
+    .our-team-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .our-team-list-item {
+        &:nth-last-child(2n) {
+            margin-right: 30px;
+        }
+        &:nth-last-child(-n + 2) {
+            margin-bottom: 0;
+        }
+    }
+}
+    
+@media screen and (min-width: 1200px){
+    .our-team-list {
+        flex-direction: row;
+    }
+
+    .our-team-list-item {
+        &:not(:last-child) {
+            margin-right: 30px;
+            margin-bottom: 0;
+        }
+
+    }
+
+    .soc-link {
+        &:hover {
+        background-color: var(--accent-color);
+        fill: var(--background-color);
+        }  
+    }
 }

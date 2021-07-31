@@ -15,6 +15,7 @@
     <header class="header">
         <div class="container inline-header">
             <a class="logo-header" href="./index.html"><span>Web</span>Studio</a>
+
             <nav class="header-navigation">    
                 <ul class="nav-menu"> 
                     <li class="nav-menu-item"><a class="nav-link-active" href="./index.html"><span class="active">Студия</span></a></li>
@@ -40,13 +41,40 @@
                     </a>
                 </li>
             </ul>
+            <button type="button" class="burger-menu" data-menu-button>
+                <svg class="burger-menu-icon">
+                    <use href="./img/sprite.svg#burger-menu"></use>
+                </svg>
+            </button>  
+        </div>      
+        <div class="mobile-menu" data-menu>
+            <button type="button" class="mobile-menu-close-button" data-menu-close>
+                <svg class="mobile-menu-close-icon">
+                    <use href="./img/sprite.svg#close-burger-menu"></use>
+                </svg>
+            </button>
+            <ul class="mobile-menu-nav">
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="./index.html">Студия</a></li>
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="./portfolio.html">Портфолио</a></li>
+                <li class="mobile-menu-item"><a class="mobile-menu-link" href="">Контакты</a></li>
+            </ul>
+            <ul class="mobile-menu-contacts">
+                <li class="mobile-menu-contacts-tel"><a class="mobile-menu-tel-link" href="">+38 096 111 11 11</a></li>
+                <li class="mobile-menu-contacts-mail"><a class="mobile-menu-mail-link" href="">info@devstudio.com</a></li>
+            </ul>
+            <ul class="mobile-menu-soc-list">
+                <li class="mobile-menu-soc-item"><a class="mobile-menu-soc-link" href="">Instagram <span class="soc-link-border"></span></a></li>
+                <li class="mobile-menu-soc-item"><a class="mobile-menu-soc-link" href="">Twitter <span class="soc-link-border"></span></a></li>
+                <li class="mobile-menu-soc-item"><a class="mobile-menu-soc-link" href="">Facebook <span class="soc-link-border"></span></a></li>
+                <li class="mobile-menu-soc-item"><a class="mobile-menu-soc-link" href="">Linkedin</a></li>
+            </ul>
         </div>    
     </header>
 
     
     <main>        
         <section class="hero">
-        <div class="hero-container">    
+        <div class="container hero-container">    
             <h1 class="hero-header">Эффективное решение для вашего бизнеса</h1>
             <button type="button" class="hero-button" data-modal-open >Заказать услуги</button>
         </div>
@@ -94,7 +122,6 @@
             </ul>
         </section>
 
-
         <section class="represent">
             <div class="container">
                 <h2 class="rep-team">Чем мы занимаемся</h2>
@@ -121,13 +148,26 @@
             </div>
         </section>
 
-    
-        <section class="our-team">
+      <section class="our-team">
             <div class="container">
                 <h2 class="rep-team">Наша команда</h2>
                 <ul class="our-team-list">
                     <li class="our-team-list-item">
-                        <img src="./img/team1.jpg" alt="Игорь Демьяненко" width="270" height="260">
+                        <picture>
+                            <source srcset="./img/desktop/face1-desktop@1x.webp 1x, ./img/desktop/face1-desktop@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/desktop/face1-desktop@1x.jpg 1x, ./img/desktop/face1-desktop@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <source srcset="./img/tablet/face1-tablet@1x.webp 1x, ./img/tablet/face1-tablet@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./img/tablet/face1-tablet@1x.jpg 1x, ./img/tablet/face1-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                            <source srcset="./img/mobile/face1-mobile@1x.webp 1x, ./img/mobile/face1-mobile@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./img/mobile/face1-mobile@1x.jpg 1x, ./img/mobile/face1-mobile@2x.jpg 2x"
+                            media="(min-width: 320px)">
+                            <img src="./img/team1.jpg" alt="Игорь Демьяненко">
+                        </picture>
                         <div class="our-team-list-item-description">
                             <h3>Игорь Демьяненко</h3>
                             <p>Product Designer</p>
@@ -164,7 +204,21 @@
                         </div>
                     </li>
                     <li class="our-team-list-item">
-                        <img src="./img/team2.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture>
+                            <source srcset="./img/desktop/face2-desktop@1x.webp 1x, ./img/desktop/face2-desktop@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/desktop/face2-desktop@1x.jpg 1x, ./img/desktop/face2-desktop@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <source srcset="./img/tablet/face2-tablet@1x.webp 1x, ./img/tablet/face2-tablet@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./img/tablet/face2-tablet@1x.jpg 1x, ./img/tablet/face2-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                            <source srcset="./img/mobile/face2-mobile@1x.webp 1x, ./img/mobile/face2-mobile@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./img/mobile/face2-mobile@1x.jpg 1x, ./img/mobile/face2-mobile@2x.jpg 2x"
+                            media="(min-width: 320px)">
+                            <img src="./img/team2.jpg" alt="Ольга Репина">
+                        </picture>
                         <div class="our-team-list-item-description">    
                             <h3>Ольга Репина</h3>
                             <p>Frontend Developer</p>
@@ -201,7 +255,21 @@
                         </div>
                     </li>
                     <li class="our-team-list-item">
-                        <img src="./img/team3.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <picture>
+                            <source srcset="./img/desktop/face3-desktop@1x.webp 1x, ./img/desktop/face3-desktop@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/desktop/face3-desktop@1x.jpg 1x, ./img/desktop/face3-desktop@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <source srcset="./img/tablet/face3-tablet@1x.webp 1x, ./img/tablet/face3-tablet@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./img/tablet/face3-tablet@1x.jpg 1x, ./img/tablet/face3-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                            <source srcset="./img/mobile/face3-mobile@1x.webp 1x, ./img/mobile/face3-mobile@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./img/mobile/face3-mobile@1x.jpg 1x, ./img/mobile/face3-mobile@2x.jpg 2x"
+                            media="(min-width: 320px)">
+                            <img src="./img/team3.jpg" alt="Николай Тарасов">
+                        </picture>
                         <div class="our-team-list-item-description">    
                             <h3>Николай Тарасов</h3>
                             <p>Marketing</p>
@@ -238,7 +306,21 @@
                         </div>
                     </li>
                     <li class="our-team-list-item">
-                        <img src="./img/team4.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <picture>
+                            <source srcset="./img/desktop/face4-desktop@1x.webp 1x, ./img/desktop/face4-desktop@2x.webp 2x"
+                            media="(min-width: 1200px)" type="image/webp">
+                            <source srcset="./img/desktop/face4-desktop@1x.jpg 1x, ./img/desktop/face4-desktop@2x.jpg 2x"
+                            media="(min-width: 1200px)">
+                            <source srcset="./img/tablet/face4-tablet@1x.webp 1x, ./img/tablet/face4-tablet@2x.webp 2x"
+                            media="(min-width: 768px)" type="image/webp">
+                            <source srcset="./img/tablet/face4-tablet@1x.jpg 1x, ./img/tablet/face4-tablet@2x.jpg 2x"
+                            media="(min-width: 768px)">
+                            <source srcset="./img/mobile/face4-mobile@1x.webp 1x, ./img/mobile/face4-mobile@2x.webp 2x"
+                            media="(min-width: 320px)" type="image/webp">
+                            <source srcset="./img/mobile/face4-mobile@1x.jpg 1x, ./img/mobile/face4-mobile@2x.jpg 2x"
+                            media="(min-width: 320px)">
+                            <img src="./img/team4.jpg" alt="Михаил Ермаков">
+                        </picture>
                         <div class="our-team-list-item-description">    
                             <h3>Михаил Ермаков</h3>
                             <p>UI Designer</p>
@@ -279,8 +361,8 @@
         </section>
 
 
-        <section class="clients">
-            <h2 class="rep-team">Наши клиенты</h2>
+    <section class="clients">
+            <h2 class="rep-team">Постоянные клиенты</h2>
             <div class="container">
                 <ul class="client-list">
                     <li class="client-item">
@@ -330,10 +412,10 @@
         </section>
 
 
-    </main>
+    </main> 
     <footer class="footer">
         <div class="container footer-inline">
-            <div>
+            <div class="footer-contacts">
                 <a class="footer-logo" href="./index.html"><span>Web</span>Studio</a>
                 <address class="address">г.Киев, пр-т Леси Украинки, 26</address>  
                 <ul class="footer-list">
@@ -432,7 +514,8 @@
                 <button type="submit" class="submit-button">Отправить</button>
             </form>
         </div>
-    </div>    
-    <script src="./js/modal.js"></script>
+    </div> 
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>   
 </body>
 </html>
